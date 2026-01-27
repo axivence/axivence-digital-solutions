@@ -79,8 +79,12 @@ const Products = () => {
                   href="https://learn-bridge-solutions.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-primary transition-colors p-1"
+                  className="text-muted-foreground hover:text-primary transition-colors p-1 z-10 relative cursor-pointer"
                   title="Learn more"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    window.open("https://learn-bridge-solutions.vercel.app/", "_blank");
+                  }}
                 >
                   <ExternalLink className="w-5 h-5" />
                 </a>
