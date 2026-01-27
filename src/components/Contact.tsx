@@ -102,7 +102,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-display text-xl font-bold mb-1">Call Us</h3>
-                  <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                  <p className="text-muted-foreground">+91 9003226263</p>
                   <p className="text-muted-foreground">Mon - Fri, 9am - 6pm</p>
                 </div>
               </div>
@@ -113,8 +113,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-display text-xl font-bold mb-1">Visit Us</h3>
-                  <p className="text-muted-foreground">123 Innovation Drive</p>
-                  <p className="text-muted-foreground">Tech City, TC 12345</p>
+                  <p className="text-muted-foreground">No 45, 9th Street Ext, Gandhipuram</p>
+                  <p className="text-muted-foreground">Coimbatore - 641012</p>
                 </div>
               </div>
             </div>
