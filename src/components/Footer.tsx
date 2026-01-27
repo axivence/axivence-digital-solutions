@@ -1,12 +1,28 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const footerLinks = {
-    Services: ["Digital Marketing", "Website Development", "App Development", "Software Development"],
-    Company: ["About Us", "Our Team", "Careers", "Blog"],
-    Support: ["Contact Us", "FAQ", "Privacy Policy", "Terms of Service"],
+    Services: [
+      { name: "Digital Marketing", href: "/services" },
+      { name: "Website Development", href: "/services" },
+      { name: "App Development", href: "/services" },
+      { name: "Software Development", href: "/services" },
+    ],
+    Company: [
+      { name: "About Us", href: "/about" },
+      { name: "Our Team", href: "/about" },
+      { name: "Products", href: "/products" },
+      { name: "Careers", href: "/contact" },
+    ],
+    Support: [
+      { name: "Contact Us", href: "/contact" },
+      { name: "FAQ", href: "/contact" },
+      { name: "Privacy Policy", href: "#" },
+      { name: "Terms of Service", href: "#" },
+    ],
   };
 
   return (
@@ -21,12 +37,12 @@ const Footer = () => {
             transition={{ duration: 0.6 }}
             className="lg:col-span-2"
           >
-            <div className="flex items-center gap-2 mb-4">
+            <Link to="/" className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
                 <span className="font-display font-bold text-primary-foreground text-xl">A</span>
               </div>
               <span className="font-display font-bold text-xl">Axivence</span>
-            </div>
+            </Link>
             <p className="text-muted-foreground max-w-sm mb-6">
               Building innovative digital solutions that transform businesses 
               and create lasting impact in the digital world.
@@ -56,13 +72,13 @@ const Footer = () => {
               <h4 className="font-display font-bold text-lg mb-4">{title}</h4>
               <ul className="space-y-3">
                 {links.map((link) => (
-                  <li key={link}>
-                    <a
-                      href="#"
+                  <li key={link.name}>
+                    <Link
+                      to={link.href}
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      {link}
-                    </a>
+                      {link.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
