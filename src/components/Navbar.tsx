@@ -2,16 +2,24 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   const navLinks = [
-    { name: "Services", href: "#services" },
-    { name: "Products", href: "#products" },
-    { name: "About", href: "#about" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "Services", href: "/services" },
+    { name: "Products", href: "/products" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
   ];
+
+  const isActive = (href: string) => {
+    if (href === "/") return location.pathname === "/";
+    return location.pathname.startsWith(href);
+  };
 
   return (
     <motion.nav
@@ -22,27 +30,33 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <a href="#" className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2">
             <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
               <span className="font-display font-bold text-primary-foreground text-xl">A</span>
             </div>
             <span className="font-display font-bold text-xl text-foreground">Axivence</span>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
-                className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium"
+                to={link.href}
+                className={`transition-colors duration-300 font-medium ${
+                  isActive(link.href)
+                    ? "text-primary"
+                    : "text-muted-foreground hover:text-primary"
+                }`}
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 glow-effect">
-              Get Started
-            </Button>
+            <Link to="/contact">
+              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 glow-effect">
+                Get Started
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -64,18 +78,24 @@ const Navbar = () => {
           >
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.name}
-                  href={link.href}
-                  className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium"
+                  to={link.href}
+                  className={`transition-colors duration-300 font-medium ${
+                    isActive(link.href)
+                      ? "text-primary"
+                      : "text-muted-foreground hover:text-primary"
+                  }`}
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
-              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 w-full">
-                Get Started
-              </Button>
+              <Link to="/contact" onClick={() => setIsOpen(false)}>
+                <Button className="bg-primary text-primary-foreground hover:bg-primary/90 w-full">
+                  Get Started
+                </Button>
+              </Link>
             </div>
           </motion.div>
         )}
