@@ -60,7 +60,7 @@ const ThinkTankPage = () => {
               Think <span className="gradient-text">Tank</span>
             </h1>
             <p className="text-muted-foreground text-xl mb-8 max-w-2xl">
-              The brain of Axivence — shaping vision, direction, and smart decision-making.
+              The brain of Core Fusion — shaping vision, direction, and smart decision-making.
             </p>
             <Link to="/contact">
               <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 glow-effect">

@@ -39,9 +39,9 @@ const Footer = () => {
           >
             <Link to="/" className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                <span className="font-display font-bold text-primary-foreground text-xl">A</span>
-              </div>
-              <span className="font-display font-bold text-xl">Axivence</span>
+              <span className="font-display font-bold text-primary-foreground text-xl">CF</span>
+            </div>
+            <span className="font-display font-bold text-xl">Core Fusion</span>
             </Link>
             <p className="text-muted-foreground max-w-sm mb-6">
               Building innovative digital solutions that transform businesses 
@@ -88,7 +88,7 @@ const Footer = () => {
 
         <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-muted-foreground text-sm">
-            © {currentYear} Axivence. All rights reserved.
+            © {currentYear} Core Fusion. All rights reserved.
           </p>
           <p className="text-muted-foreground text-sm">
             Crafting digital excellence, one project at a time.
