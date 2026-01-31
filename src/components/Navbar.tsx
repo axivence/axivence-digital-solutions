@@ -46,9 +46,9 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
             <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-              <span className="font-display font-bold text-primary-foreground text-xl">A</span>
+              <span className="font-display font-bold text-primary-foreground text-xl">CF</span>
             </div>
-            <span className="font-display font-bold text-xl text-foreground">Axivence</span>
+            <span className="font-display font-bold text-xl text-foreground">Core Fusion</span>
           </Link>
 
           {/* Desktop Navigation */}

@@ -52,13 +52,13 @@ const AboutPage = () => {
             >
               <span className="text-primary font-medium text-sm uppercase tracking-wider">About Us</span>
               <h1 className="font-display text-5xl md:text-6xl font-bold mt-4 mb-6">
-                We Are <span className="gradient-text">Axivence</span>
+                We Are <span className="gradient-text">Core Fusion</span>
               </h1>
               <p className="text-muted-foreground text-lg mb-6">
                 A team of passionate innovators dedicated to transforming businesses through technology. We combine creativity with technical expertise to deliver solutions that make a real impact.
               </p>
               <p className="text-muted-foreground mb-8">
-                Founded with a vision to bridge the gap between businesses and technology, Axivence has grown into a trusted partner for organizations seeking digital transformation. Our journey is defined by the success of our clients and the lasting relationships we build.
+                Founded with a vision to bridge the gap between businesses and technology, Core Fusion has grown into a trusted partner for organizations seeking digital transformation. Our journey is defined by the success of our clients and the lasting relationships we build.
               </p>
               <Link to="/contact">
                 <Button className="bg-primary text-primary-foreground hover:bg-primary/90">

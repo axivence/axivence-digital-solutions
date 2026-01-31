@@ -10,7 +10,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email Us",
-    details: ["hello@axivence.com", "support@axivence.com"],
+    details: ["hello@corefusion.com", "support@corefusion.com"],
   },
   {
     icon: Phone,

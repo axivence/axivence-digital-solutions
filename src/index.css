@@ -4,7 +4,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* Axivence Design System - Dark Tech Theme */
+/* Core Fusion Design System - Dark Tech Theme */
 
 @layer base {
   :root {
@@ -38,7 +38,7 @@
 
     --radius: 0.75rem;
 
-    /* Custom Axivence tokens */
+    /* Custom Core Fusion tokens */
     --glow-primary: 187 100% 50%;
     --glow-accent: 260 100% 65%;
     --gradient-start: 187 100% 50%;

@@ -74,7 +74,7 @@ const HeroSlider = () => {
             className="max-w-2xl"
           >
             <span className="text-primary font-medium text-sm uppercase tracking-wider mb-4 block">
-              Welcome to Axivence
+              Welcome to Core Fusion
             </span>
             <h1 className="font-display text-5xl md:text-7xl font-bold mb-6 leading-tight">
               {slides[currentSlide].title.split(" ").map((word, i) => (

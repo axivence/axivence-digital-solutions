@@ -35,7 +35,7 @@ const About = () => {
               Your Partner in <span className="gradient-text">Digital Success</span>
             </h2>
             <p className="text-muted-foreground text-lg mb-8">
-              At Axivence, we combine technical expertise with creative innovation to deliver 
+              At Core Fusion, we combine technical expertise with creative innovation to deliver 
               solutions that make a real impact. We're not just developers – we're your strategic 
               partners in building digital excellence.
             </p>
